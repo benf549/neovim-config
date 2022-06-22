@@ -1,11 +1,4 @@
 
-" INSTALLATION INSTRUCTIONS:
-" 1) install neovim (sudo apt-get install neovim) and place this file in .config/nvim/init.vim
-" 2) Then install vim-plug by running: 
-    " sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-    "       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-" 3) Then install plugins using :PlugInstall
-
 call plug#begin()
     Plug 'tomasiser/vim-code-dark' " Color Scheme VS-Code Theme
     Plug 'preservim/nerdcommenter' " Code Comment plug-in
