@@ -1,5 +1,5 @@
-# INSTALLATION INSTRUCTIONS:
-- install neovim (sudo apt-get install neovim) and place this file in .config/nvim/init.vim
+# Installation Instructions:
+- install neovim (`sudo apt-get install neovim`) and place this file in `~/.config/nvim/init.vim`
 - Then install vim-plug by running: 
 ```terminal
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
