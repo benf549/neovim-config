@@ -1,4 +1,11 @@
 
+" INSTALLATION INSTRUCTIONS:
+" 1) install neovim (sudo apt-get install neovim) and place this file in .config/nvim/init.vim
+" 2) Then install vim-plug by running: 
+    " sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    "       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+" 3) Then install plug-ins using :PlugInstall
+
 call plug#begin()
     Plug 'tomasiser/vim-code-dark' " Color Scheme VS-Code Theme
     Plug 'preservim/nerdcommenter' " Code Comment plug-in
@@ -11,7 +18,7 @@ call plug#begin()
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'Xuyuanp/nerdtree-git-plugin' 
 
-    Plug 'SirVer/ultisnips' " allows IDE-like audocompletion suggestions, add new snippets with :UltiSnipsEdit or :es (custom)
+    Plug 'SirVer/ultisnips' " allows IDE-like auto-completion suggestions, add new snippets with :UltiSnipsEdit or :es (custom)
     Plug 'honza/vim-snippets'
     Plug 'neoclide/coc.nvim', {'branch': 'release'} " Code Completion library
 call plug#end()
@@ -56,7 +63,6 @@ if (has('termguicolors'))
     set termguicolors
 endif
 
-
 " Set background color to be transparent to match terminal background.
 highlight Normal ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermfg=DarkGrey ctermbg=NONE guifg=#666666 guibg=NONE
@@ -87,7 +93,7 @@ map <leader>l :set list!<CR>
 
 "
 "
-" comment lines using nerdcommenter and control-/ in normal, visual, and insert modes.
+" Comment lines using nerdcommenter and control-/ in normal, visual, and insert modes.
 "
 "
 nnoremap <C-_> :call nerdcommenter#Comment(0,"toggle")<CR>
@@ -97,7 +103,7 @@ nnoremap <leader>c :call nerdcommenter#Comment(0, "toggle")<CR>
 
 "
 "
-" Configure Lightline bar
+" Configure LightLine bar
 "
 "
 let g:lightline = {
@@ -111,7 +117,7 @@ let s:palette.tabline.middle = s:palette.normal.middle
 
 "
 "
-" Snppt and C.O.C. Auto-Completion Configuration 
+" Snippet and C.O.C. Auto-Completion Configuration 
 " 
 " Cycle Snippet completion with control-j or control-k
 let g:UltiSnipsExpandTrigger='<C-j>'
@@ -199,7 +205,7 @@ let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
 
-" NERDTree Git Plugin special characters
+" NERDTree Git Plug-in special characters
 let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
