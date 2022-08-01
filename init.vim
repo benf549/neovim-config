@@ -7,7 +7,8 @@
 " 3) Then install plug-ins using :PlugInstall
 
 call plug#begin()
-    Plug 'tomasiser/vim-code-dark' " Color Scheme VS-Code Theme
+    " Plug 'tomasiser/vim-code-dark' " Color Scheme VS-Code Theme
+    Plug 'catppuccin/nvim', {'as': 'catppuccin'}
     Plug 'preservim/nerdcommenter' " Code Comment plug-in
     Plug 'mhinz/vim-startify' " Fancy start screen for when you run nvim without a file to open.
     Plug 'itchyny/lightline.vim' " Nicer status bar for editor.
@@ -57,7 +58,13 @@ set splitright " open new split panes to right and below
 set splitbelow
 let mapleader = ' ' " Set the leader key to space.
 
-colorscheme codedark
+let g:catppuccin_flavour = "mocha"
+
+lua << EOF
+require("catppuccin").setup()
+EOF
+
+colorscheme catppuccin
 
 if (has('termguicolors'))
     set termguicolors
